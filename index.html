@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navegacion">
+
+            <ul class="navegacion__enlace">
+                <li>
+                    <h2 class="brand">
+                    <i class="fa-solid fa-tree"></i>
+                    App
+                </h2>
+            </li>
+                <li><a href="#">Principal</a></li>
+                <li><a href="#">Reclamos</a></li>
+            </ul>
+
+            <ul class="navegacion__enlace">
+                <li><i class="fa-solid fa-gear"></i></li>
+                <li><i class="fa-solid fa-user"></i></li>
+                <li><button class="boton btn_salir"><i class="fa-solid fa-power-off"></i>Salir</button></li>
+            </ul>
+        </nav>
+
+        <button id="menu"><i class="fa-solid fa-bars"></i></button>
+    </header>
+
+    <main class="contenedor">        
+        <div class="contenedor__formulario">
+            <h4>Director de Control ambiental</h4>
+            <h1>Reclamos correspondientes</h1>
+            <form class="formulario" >
+
+                <div class="campo">
+                    <label for="apellido">Nombre</label>
+                    <input class="campo__field" type="text" name="nombre" id="nombre" placeholder="Escriba su nombre">
+                </div>
+
+                <div class="campo">
+                    <label for="apellido">Apellido</label>
+                    <input class="campo__field" type="text" name="apellido" id="apellido" placeholder="Escriba su apellido">
+                </div>
+    
+                    <div class="campo">
+                        <label for="DNI">D.N.I</label>
+                        <input class="campo__field" type="number" name="DNI" id="DNI" placeholder="Escriba su DNI">
+                    </div>
+                    
+
+
+                <div class="campo">
+                    <label for="Reclamo">Reclamo</label>
+                    <input  class="campo__field" type="number" name="Reclamo" id="reclamo" placeholder="Escriba su Numero de Reclamo">
+                </div>
+    
+                <div class="campo">
+                    <label for="desde">Desde</label>
+                    <input class="campo__field" type="text" name="desde" id="desde" placeholder="Desde">
+                </div>
+    
+                
+                <div class="campo">
+                    <label for="tipo-reclamo">Reclamo</label>
+                    <select name="tipo-reclamo" id="tipo-reclamo">
+                        <option selected disabled>---Selecione su reclamo---</option>
+                    </select>
+                </div>
+                
+                <div class="campo">
+                    <label for="estado">Estado</label>
+                    <select name="estado" id="estado">
+                        <option selected disabled>---Selecione un estado---</option>
+                    </select>
+                </div>
+                
+                <div class="campo">
+                    <label for="hasta">Hasta</label>
+                    <input class="campo__field" type="text" name="hasta" id="hasta" placeholder="Hasta">
+                </div>
+                <input class="boton" type="submit" value="Filtrar">
+            </form>
+        </div>
+
+       <div class="contenedor_tabla">
+        <table>
+            <thead>
+                <tr>
+                    <th>Reclamo</th>
+                    <th>Fecha/Alta</th>
+                    <th>Estado</th>
+                    <th>Barrio</th>
+                    <th>Calle</th>
+                    <th>Nº</th>
+                    <th>Titulo</th>
+                    <th>Rta/Hs</th>
+                    <th>Cav</th>
+                    <th>Obs.</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>00153232392017</td>
+                    <td>2015-04-21</td>
+                    <td id="estado-tabla">En resolucion</td>
+                    <td>Desconocido</td>
+                    <td>Fleitas,Dora catalina</td>
+                    <td>745</td>
+                    <td>Denuncias industdias</td>
+                    <td>48</td>
+                    <td>Ver</td>
+                    <td><a id="hidde_btn" class="btn show_btn"><i class="fa-solid fa-eye"></i></a></td>
+                </tr>
+                <tr>
+                    <td>001161232392017</td>
+                    <td>2015-04-21</td>
+                    <td id="estado-tabla">En resolucion</td>
+                    <td>Desconocido</td>
+                    <td>Fleitas,Dora catalina</td>
+                    <td>745</td>
+                    <td>Denuncias industdias</td>
+                    <td>48</td>
+                    <td>Ver</td>
+                    <td><a class="btn show_btn"><i class="fa-solid fa-eye"></i></a></td>
+                </tr>
+                <tr>
+                    <td>00111232392017</td>
+                    <td>2015-04-21</td>
+                    <td id="estado-tabla">En resolucion</td>
+                    <td>Desconocido</td>
+                    <td>Fleitas,Dora catalina</td>
+                    <td>745</td>
+                    <td>Denuncias industdias</td>
+                    <td>48</td>
+                    <td>Ver</td>
+                    <td><a class="btn show_btn"><i class="fa-solid fa-eye"></i></a></td>
+                </tr>
+                                <tr>
+                    <td>001112532392017</td>
+                    <td>2015-04-21</td>
+                    <td id="estado-tabla">En resolucion</td>
+                    <td>Desconocido</td>
+                    <td>Fleitas,Dora catalina</td>
+                    <td>745</td>
+                    <td>Denuncias industdias</td>
+                    <td>48</td>
+                    <td>Ver</td>
+                    <td><a class="btn show_btn"><i class="fa-solid fa-eye"></i></a></td>
+                </tr>
+                <tr>
+                    <td>00111535039/2017</td>
+                    <td>2015-04-21</td>
+                    <td id="estado-tabla">En resolucion</td>
+                    <td>Desconocido</td>
+                    <td>Fleitas,Dora catalina</td>
+                    <td>745</td>
+                    <td>Denuncias industdias</td>
+                    <td>48</td>
+                    <td>Ver</td>
+                    <td><a class="btn show_btn"><i class="fa-solid fa-eye"></i></a></td>
+                </tr>
+
+                <tr>
+                    <td>00112332039/2017</td>
+                    <td>2015-04-21</td>
+                    <td id="estado-tabla">En resolucion</td>
+                    <td>Desconocido</td>
+                    <td>Fleitas,Dora catalina</td>
+                    <td>745</td>
+                    <td>Denuncias industdias</td>
+                    <td>48</td>
+                    <td>Ver</td>
+                    <td><a class="btn show_btn"><i class="fa-solid fa-eye"></i></a></td>
+                </tr>
+
+                <tr>
+                    <td>00111533039/2017</td>
+                    <td>2015-04-21</td>
+                    <td id="estado-tabla">En resolucion</td>
+                    <td>Desconocido</td>
+                    <td>Fleitas,Dora catalina</td>
+                    <td>745</td>
+                    <td>Denuncias industdias</td>
+                    <td>48</td>
+                    <td>Ver</td>
+                    <td><a class="btn show_btn"><i class="fa-solid fa-eye"></i></a></td>
+                </tr>
+
+                <tr>
+                    <td>001112530392017</td>
+                    <td>2015-04-21</td>
+                    <td id="estado-tabla">En resolucion</td>
+                    <td>Desconocido</td>
+                    <td>Fleitas,Dora catalina</td>
+                    <td>745</td>
+                    <td>Denuncias industdias</td>
+                    <td>48</td>
+                    <td>Ver</td>
+                    <td><a class="btn show_btn"><i class="fa-solid fa-eye"></i></a></td>
+                </tr>
+
+                <tr>
+                    <td>001115330392017</td>
+                    <td>2015-04-21</td>
+                    <td id="estado-tabla">En resolucion</td>
+                    <td>Desconocido</td>
+                    <td>Fleitas,Dora catalina</td>
+                    <td>745</td>
+                    <td>Denuncias industdias</td>
+                    <td>48</td>
+                    <td>Ver</td>
+                    <td><a class="btn show_btn"><i class="fa-solid fa-eye"></i></a></td>
+                </tr>
+            </tbody>
+        </table>
+       </div>
+       
+    </main>
+    <script src="https://kit.fontawesome.com/e437e95637.js" crossorigin="anonymous"></script>
+    <script src="javascript/main.js"></script>
+</body>
+</html>
